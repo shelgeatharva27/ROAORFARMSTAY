@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="index.html" class="back-button">Back to Home</a>
+    <header>
+        <h1>Expenses</h1>
+    </header>
+    <main style="display: flex; gap: 20px;">
+        <!-- Left Side: Expense Form and Main Table -->
+        <div>
+            <!-- Month Selection -->
+            <label for="month-select">Select Month:</label>
+            <select id="month-select">
+                <!-- Months will be dynamically populated here -->
+            </select>
+
+            <!-- Add Expense Button -->
+            <button id="add-expense-button">Add Expense</button>
+
+            <!-- Expense Table -->
+            <table id="expense-table">
+                <thead>
+                    <tr>
+                        <th>Expense Name</th>
+                        <th>Value</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be dynamically inserted here -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="text-align: right; font-weight: bold;">Total Expenses:</td>
+                        <td id="total-expense" style="font-weight: bold;">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Right Side: Summary Table -->
+        <div>
+            <h2>Expense Summary</h2>
+            <table id="summary-table">
+                <thead>
+                    <tr>
+                        <th>Expense Name</th>
+                        <th>Total Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Summary data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Modal Form for Adding Expenses -->
+    <div class="form-container" id="expense-form-container" style="display: none;">
+        <form id="expense-form">
+            <label for="expense-name">Expense Name:</label>
+            <select id="expense-name" name="expenseName" required>
+                <option value="milk">Milk</option>
+                <option value="salary">Salary</option>
+                <option value="curd">Curd</option>
+                <option value="kirana">Kirana</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="eggs">Eggs</option>
+                <option value="plantation">Plantation</option>
+                <option value="maintenance">Maintenance</option>
+                <option value="electricity-bill">Electricity Bill</option>
+                <option value="gas-bill">Gas Bill</option>
+                <option value="petrol">Petrol</option>
+                <option value="others">Others</option>
+            </select>
+
+            <!-- Custom input for Salary -->
+            <div id="salary-expense-name-container" style="display: none;">
+                <label for="salary-expense-name">Enter Salary Details:</label>
+                <input type="text" id="salary-expense-name" name="salaryExpenseName">
+            </div>
+
+            <!-- Custom input for Others -->
+            <div id="other-expense-name-container" style="display: none;">
+                <label for="other-expense-name">Enter Custom Expense Name:</label>
+                <input type="text" id="other-expense-name" name="otherExpenseName">
+            </div>
+
+            <label for="expense-value">Expense Value:</label>
+            <input type="number" id="expense-value" name="expenseValue" required>
+
+            <button type="submit">Save</button>
+            <button type="button" id="cancel-button">Cancel</button>
+        </form>
+    </div>
+
+    <script src="js/expense.js" type="module"></script>
+</body>
+</html>

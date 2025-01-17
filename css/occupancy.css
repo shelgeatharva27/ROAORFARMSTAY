@@ -1,0 +1,96 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  /* Main Title */
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  /* Calendar Container */
+  .calendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  
+  /* Day Column Styling */
+  .day-column {
+    width: 130px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #ecf0f1;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect for Columns */
+  .day-column:hover {
+    background-color: #f0f9ff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Heading inside each column */
+  .day-column h3 {
+    font-size: 1.2em;
+    color: #2980b9;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  /* Checkbox Group Styling */
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  
+  /* Checkbox Styling */
+  .checkbox-group input {
+    margin-right: 8px;
+    accent-color: #2980b9;  /* Change checkbox color to blue */
+  }
+  
+  /* Checkbox Label Styling */
+  .checkbox-group label {
+    font-size: 0.9em;
+    color: #34495e;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect on Labels */
+  .checkbox-group label:hover {
+    color: #2980b9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .calendar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .day-column {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  

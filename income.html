@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="index.html" class="back-button">Back to Home</a>
+    <header>
+        <h1>Income</h1>
+    </header>
+    <main>
+        <!-- Date Picker for Date Selection -->
+        <label for="date-filter">Select Date:</label>
+        <input type="date" id="date-filter">
+
+        <!-- Month Picker for Monthly Income -->
+        <label for="month-filter">Select Month:</label>
+        <input type="month" id="month-filter">
+
+        <table id="income-table">
+            <thead>
+                <tr>
+                    <th>Name of Customer</th>
+                    <th>Advance Paid</th>
+                    <th>Balance</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Payment Method</th>
+                    <th>Checkout Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be dynamically inserted here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" style="text-align: right; font-weight: bold;">Total:</td>
+                    <td id="sum-total" style="font-weight: bold;">0</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: right; font-weight: bold;">Total Cash Payments:</td>
+                    <td id="sum-cash" style="font-weight: bold;">0</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: right; font-weight: bold;">Total UPI Payments:</td>
+                    <td id="sum-upi" style="font-weight: bold;">0</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: right; font-weight: bold;">Total Income for Selected Month:</td>
+                    <td id="sum-monthly-total" style="font-weight: bold;">0</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Modal Form -->
+        <div class="form-container" id="modal" style="display: none;">
+            <form id="edit-form">
+                <label for="customer-name">Name of Customer:</label>
+                <input type="text" id="customer-name" name="customerName">
+
+                <label for="advance-paid">Advance Paid:</label>
+                <input type="number" id="advance-paid" name="advancePaid">
+
+                <label for="balance">Balance:</label>
+                <input type="number" id="balance" name="balance">
+
+                <label for="discount">Discount:</label>
+                <input type="number" id="discount" name="discount" value="0" min="0" step="any">
+
+                <label for="total">Total:</label>
+                <input type="number" id="total" name="total" readonly>
+
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="paymentMethod">
+                    <option value="cash">Cash</option>
+                    <option value="upi">UPI</option>
+                </select>
+
+                <label for="checkout-date">Checkout Date:</label>
+                <input type="date" id="checkout-date" name="checkoutDate">
+
+                <button type="submit">Save</button>
+                <button type="button" id="cancel-button">Cancel</button>
+            </form>
+        </div>
+    </main>
+    <script src="js/income.js" type="module"></script>
+</body>
+</html>

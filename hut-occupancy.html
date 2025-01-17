@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Checkboxes for Month</title>
+  <link rel="stylesheet" href="css/occupancy.css"> <!-- Linking to the external CSS -->
+</head>
+<body>
+  <header>
+    <h1>Hut Occupancy</h1>
+    <div>
+      <label for="monthSelector">Select Month: </label>
+      <select id="monthSelector">
+        <!-- Month options will be dynamically added here -->
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div class="calendar" id="calendar"></div>
+
+    <!-- Occupancy Pop-up Modal -->
+    <div id="occupancyModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Hut 4 Occupancy Details</h2>
+        <div id="occupancyDetails"></div>
+        <button id="saveOccupancy">Save</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script> <!-- Linking to the external JS -->
+</body>
+</html>

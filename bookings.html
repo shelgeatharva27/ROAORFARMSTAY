@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings Log</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Bookings Log</h1>
+    <form id="add-booking-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" required><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" required><br>
+        
+        <fieldset>
+            <legend>Total Members:</legend>
+            <label for="adults">Adults:</label>
+            <input type="number" id="adults" min="0" value="0" required><br>
+            <label for="under-12">Under 12:</label>
+            <input type="number" id="under-12" min="0" value="0" required><br>
+            <label for="under-5">Under 5:</label>
+            <input type="number" id="under-5" min="0" value="0" required><br>
+            <label for="total-members">Total Members:</label>
+            <input type="number" id="total-members" readonly>
+        </fieldset>
+        
+        <label for="checkin">Check-In Date:</label>
+        <input type="date" id="checkin" required><br>
+        <label for="checkout">Check-Out Date:</label>
+        <input type="date" id="checkout" required><br>
+        <label for="advance">Advance Paid:</label>
+        <input type="number" id="advance" min="0" value="0" required><br>
+        <label for="balance">Balance Remaining:</label>
+        <input type="number" id="balance" min="0" value="0" required><br>
+        <label for="total">Total Amount:</label>
+        <input type="number" id="total" min="0" value="0" required><br>
+        <button type="submit">Add Booking</button>
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Total Members</th>
+                <th>Check-In</th>
+                <th>Check-Out</th>
+                <th>Advance</th>
+                <th>Balance</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="bookings-table"></tbody>
+    </table>
+
+    <!-- Include Custom Script -->
+    <script type="module" src="js/bookings.js"></script>
+</body>
+</html>
